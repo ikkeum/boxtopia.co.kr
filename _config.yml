@@ -1,0 +1,5 @@
+url: "https://boxtopia.co.kr"
+plugins:
+  - jekyll-sitemap
+exclude:
+  - .naver6d0d517a3a973214b6f3924444b3d371.html

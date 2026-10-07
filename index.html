@@ -1,918 +1,965 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!--    <link rel="canonical" href="https://https://demo.themesberg.com/landwind/"/>-->
-
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="naver-site-verification" content="b1f60cc2d7121f101f8137c8cd2ef29760f02113"/>
-    <title>박스의 모든 것, 당신의 포장 솔루션을 위한 전문가</title>
+    <title>박스토피아 — 박스 제작, 설계부터 납품까지</title>
 
-    <!-- Meta SEO -->
     <meta name="title" content="박스토피아 Boxtopia">
-    <meta name="description" content="박스의 모든 것, 당신의 포장 솔루션을 위한 맞춤 전문가">
+    <meta name="description" content="직영 공장 5곳, 전국 190여 협력 공장. 위치·가격·품질 기준으로 최적의 박스 공장을 매칭해드립니다.">
     <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="canonical" href="https://boxtopia.co.kr/">
     <meta name="language" content="Korean">
-    <meta name="author" content="GukDaHye">
+    <meta name="author" content="고구려박스">
 
-
-    <!-- Social media share -->
-    <meta property="og:title" content="박스토피아-박스 맞춤 제작의 정석">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://boxtopia.co.kr/">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:title" content="박스토피아 — 박스 맞춤 제작의 정석">
     <meta property="og:site_name" content="박스토피아 Boxtopia">
-    <meta property="og:description"
-          content="박스의 모든 것, 당신의 포장 솔루션을 위한 맞춤 전문가 ">
-    <meta property="og:image" content="images/main.jpg">
+    <meta property="og:description" content="직영 공장 5곳, 전국 190여 협력 공장과 함께하는 맞춤 박스 제작 파트너">
+    <meta property="og:image" content="https://boxtopia.co.kr/images/main.jpg">
 
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <link href="./output.css" rel="stylesheet">
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <meta name="theme-color" content="#10316B">
+
+    <!-- Fonts: IBM Plex Sans KR (본문) + IBM Plex Mono (치수/라벨) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================================
+           BOXTOPIA — "설계 도면 (BLUEPRINT)"
+           모눈종이, 치수선, 표제란 — 박스 도면 위에서 시작하는 제작
+           ============================================================ */
+        :root {
+            --paper: #F5F7FA;          /* 도면 용지 */
+            --grid-minor: rgba(16, 49, 107, .07);
+            --grid-major: rgba(16, 49, 107, .14);
+            --ink: #10316B;            /* 제도 잉크 네이비 */
+            --ink-strong: #0A1F47;
+            --ink-soft: #4A608C;
+            --blue: #1B57D6;           /* 액션 블루 */
+            --blue-deep: #123FA8;
+            --cyan-bg: #E3ECFA;
+            --stamp: #D7263D;          /* 승인 도장 레드 */
+            --white: #FFFFFF;
+            --line: rgba(16, 49, 107, .25);
+            --mono: 'IBM Plex Mono', monospace;
+            --sans: 'IBM Plex Sans KR', -apple-system, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--sans);
+            color: var(--ink);
+            line-height: 1.7;
+            word-break: keep-all; overflow-wrap: break-word;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            background:
+                linear-gradient(var(--grid-minor) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-minor) 1px, transparent 1px),
+                linear-gradient(var(--grid-major) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
+                var(--paper);
+            background-size: 10px 10px, 10px 10px, 50px 50px, 50px 50px;
+        }
+        ::selection { background: var(--ink); color: var(--paper); }
+        img { max-width: 100%; display: block; }
+        a { color: inherit; text-decoration: none; }
+        ul { list-style: none; }
+
+        .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+        /* 모노 라벨 */
+        .mlabel {
+            font-family: var(--mono); font-size: 12px; font-weight: 600;
+            letter-spacing: .22em; text-transform: uppercase;
+            color: var(--blue);
+            display: inline-flex; align-items: center; gap: 10px;
+        }
+        .mlabel::before { content: ''; width: 34px; height: 1px; background: var(--blue); }
+
+        .sec { padding: 110px 0; position: relative; }
+        .sec-head { margin-bottom: 56px; }
+        .sec-head h2 {
+            font-size: clamp(30px, 4.2vw, 46px); font-weight: 700;
+            letter-spacing: -.02em; line-height: 1.25; margin-top: 16px;
+            color: var(--ink-strong);
+        }
+        .sec-head p { margin-top: 14px; color: var(--ink-soft); font-size: 16.5px; max-width: 580px; }
+        /* 도면 번호 — 섹션 우상단 */
+        .dwg-no {
+            position: absolute; top: 42px; right: 24px;
+            font-family: var(--mono); font-size: 11.5px; letter-spacing: .16em;
+            color: var(--ink-soft); border: 1px solid var(--line);
+            padding: 5px 12px; background: var(--white);
+        }
+
+        /* 스크롤 리빌 */
+        .rv { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+        .rv.on { opacity: 1; transform: none; }
+        .rv-d1 { transition-delay: .12s; } .rv-d2 { transition-delay: .24s; } .rv-d3 { transition-delay: .36s; }
+        @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } }
+
+        /* ===================== 헤더 ===================== */
+        header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(245, 247, 250, .94);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--line);
+        }
+        .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .brand { display: flex; align-items: center; gap: 12px; }
+        .brand .mark { font-weight: 700; font-size: 20px; letter-spacing: .02em; color: var(--ink-strong); }
+        .brand .mark b { color: var(--blue); }
+        .brand .doc { font-family: var(--mono); font-size: 10.5px; letter-spacing: .14em; color: var(--ink-soft); border-left: 1px solid var(--line); padding-left: 12px; }
+        .nav-links { display: flex; gap: 32px; font-size: 14.5px; font-weight: 500; }
+        .nav-links a { padding: 4px 0; border-bottom: 2px solid transparent; transition: border-color .2s, color .2s; }
+        .nav-links a:hover { color: var(--blue); border-bottom-color: var(--blue); }
+        .nav-cta {
+            font-weight: 700; font-size: 14px;
+            background: var(--blue); color: #fff;
+            padding: 10px 22px; border-radius: 2px;
+            transition: background .2s;
+        }
+        .nav-cta:hover { background: var(--blue-deep); }
+        .menu-btn { display: none; background: var(--white); border: 1px solid var(--line); padding: 6px 11px; font-size: 17px; cursor: pointer; color: var(--ink); }
+
+        /* ===================== 히어로 ===================== */
+        .hero { padding: 172px 0 110px; position: relative; overflow: hidden; }
+        .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 64px; align-items: center; }
+        .hero h1 {
+            font-size: clamp(36px, 5.2vw, 58px); font-weight: 700;
+            line-height: 1.22; letter-spacing: -.03em; color: var(--ink-strong);
+            margin: 20px 0 22px;
+        }
+        .hero h1 mark {
+            background: none; color: var(--blue);
+            border-bottom: 4px solid var(--blue); padding-bottom: 2px;
+        }
+        .hero .lede { font-size: 17.5px; color: var(--ink-soft); max-width: 500px; margin-bottom: 36px; }
+        .hero .lede strong { color: var(--ink-strong); font-weight: 700; }
+
+        .btn-row { display: flex; gap: 14px; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 10px;
+            font-weight: 700; font-size: 15.5px; font-family: var(--sans);
+            padding: 15px 30px; border-radius: 2px; cursor: pointer;
+            transition: transform .15s, box-shadow .2s, background .2s;
+            border: 1px solid transparent;
+        }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(16, 49, 107, .18); }
+        .btn-primary { background: var(--blue); color: #fff; }
+        .btn-ghost { background: var(--white); color: var(--ink); border-color: var(--line); }
+
+        .hero-foot { margin-top: 42px; display: flex; gap: 30px; flex-wrap: wrap; font-family: var(--mono); font-size: 13px; color: var(--ink-soft); }
+        .hero-foot b { color: var(--ink-strong); font-weight: 600; }
+
+        /* 도면 카드 — 박스 3면도 + 치수선 */
+        .draft {
+            background: var(--white);
+            border: 1.5px solid var(--ink);
+            box-shadow: 0 24px 50px rgba(16, 49, 107, .14);
+            position: relative;
+        }
+        .draft .d-head {
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1.5px solid var(--ink);
+            padding: 12px 18px;
+            font-family: var(--mono); font-size: 11.5px; letter-spacing: .14em;
+        }
+        .draft .d-head .rev { color: var(--stamp); }
+        .draft .d-body { padding: 30px 26px 24px; }
+        .draft svg { width: 100%; height: auto; display: block; }
+        .draft .d-spec {
+            border-top: 1.5px solid var(--ink);
+            display: grid; grid-template-columns: 1fr 1fr;
+            font-family: var(--mono); font-size: 12px;
+        }
+        .draft .d-spec div { padding: 10px 18px; border-top: 1px solid var(--line); }
+        .draft .d-spec div:nth-child(odd) { border-right: 1px solid var(--line); }
+        .draft .d-spec div:nth-child(-n+2) { border-top: 0; }
+        .draft .d-spec span { display: block; font-size: 10px; letter-spacing: .18em; color: var(--ink-soft); }
+        .draft .d-spec b { font-weight: 600; color: var(--ink-strong); }
+        .draft .stamp {
+            position: absolute; right: 22px; top: 64px;
+            font-family: var(--mono); font-weight: 600; font-size: 13px; letter-spacing: .22em;
+            color: var(--stamp); border: 2.5px solid var(--stamp); border-radius: 50%;
+            width: 92px; height: 92px; display: flex; align-items: center; justify-content: center;
+            text-align: center; line-height: 1.45;
+            transform: rotate(-12deg); opacity: .82;
+        }
+
+        /* ===================== 신뢰 지표 (스펙 테이블) ===================== */
+        .specbar { background: var(--ink); color: var(--paper); padding: 0; }
+        .spec-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+        .spec { padding: 44px 28px 40px; border-left: 1px solid rgba(245, 247, 250, .18); }
+        .spec:first-child { border-left: 0; }
+        .spec .k { font-family: var(--mono); font-size: 11px; letter-spacing: .22em; color: #8FB4F4; }
+        .spec .v { font-size: clamp(38px, 4.4vw, 56px); font-weight: 700; line-height: 1.15; margin-top: 8px; font-variant-numeric: tabular-nums; }
+        .spec .v sup { font-size: .45em; color: #8FB4F4; }
+        .spec .d { font-size: 13.5px; color: rgba(245, 247, 250, .65); margin-top: 4px; }
+
+        /* ===================== 강점 ===================== */
+        .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1.5px solid var(--ink); background: var(--white); }
+        .v-card { padding: 40px 32px 38px; position: relative; }
+        .v-card + .v-card { border-left: 1px solid var(--line); }
+        .v-card .no { font-family: var(--mono); font-size: 12px; letter-spacing: .2em; color: var(--blue); }
+        .v-card h3 { font-size: 20px; font-weight: 700; margin: 14px 0 10px; color: var(--ink-strong); }
+        .v-card p { font-size: 14.5px; color: var(--ink-soft); }
+        .v-card::after {
+            content: ''; position: absolute; top: 14px; right: 14px;
+            width: 10px; height: 10px;
+            border-top: 1.5px solid var(--blue); border-right: 1.5px solid var(--blue);
+        }
+
+        /* ===================== 공장 네트워크 ===================== */
+        .net-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: stretch; }
+        .net-card { background: var(--white); border: 1.5px solid var(--ink); position: relative; }
+        .net-card .n-head {
+            display: flex; justify-content: space-between; align-items: baseline;
+            padding: 22px 26px 0;
+        }
+        .net-card .n-head h3 { font-size: 22px; font-weight: 700; color: var(--ink-strong); }
+        .net-card .n-head .code { font-family: var(--mono); font-size: 11px; letter-spacing: .18em; color: var(--ink-soft); }
+        .net-card .n-num {
+            padding: 6px 26px 0;
+            font-size: clamp(44px, 5vw, 64px); font-weight: 700; line-height: 1.1;
+            color: var(--blue); font-variant-numeric: tabular-nums;
+        }
+        .net-card .n-num small { font-size: .4em; font-weight: 600; color: var(--ink-soft); margin-left: 6px; }
+        .net-card .n-desc { padding: 8px 26px 20px; font-size: 14.5px; color: var(--ink-soft); border-bottom: 1px solid var(--line); }
+        .addr { padding: 8px 0; }
+        .addr li {
+            display: flex; gap: 14px; align-items: baseline;
+            padding: 11px 26px; font-size: 14.5px;
+        }
+        .addr li + li { border-top: 1px dashed var(--line); }
+        .addr li b { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; color: var(--blue); flex-shrink: 0; }
+        .npoints { padding: 14px 26px 22px; display: grid; gap: 12px; }
+        .npoints li { display: flex; gap: 12px; font-size: 14.5px; align-items: baseline; }
+        .npoints li::before { content: '—'; color: var(--blue); font-weight: 700; flex-shrink: 0; }
+
+        /* ===================== 프로세스 (공정 흐름도) ===================== */
+        .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; counter-reset: step; }
+        .f-step { position: relative; background: var(--white); border: 1px solid var(--line); padding: 30px 24px 28px; }
+        .f-step::before {
+            counter-increment: step;
+            content: '0' counter(step);
+            font-family: var(--mono); font-weight: 600; font-size: 13px; letter-spacing: .14em;
+            color: var(--white); background: var(--ink);
+            position: absolute; top: -14px; left: 20px; padding: 4px 12px;
+        }
+        .f-step h3 { font-size: 18px; font-weight: 700; margin: 8px 0 8px; color: var(--ink-strong); }
+        .f-step p { font-size: 14px; color: var(--ink-soft); }
+        .f-step::after {
+            content: '→'; position: absolute; right: -22px; top: 50%;
+            transform: translateY(-50%); color: var(--blue); font-size: 19px; font-weight: 700;
+        }
+        .f-step:last-child::after { display: none; }
+
+        /* ===================== 생산 현장 ===================== */
+        .photos { background: var(--cyan-bg); }
+        .ph-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+        .ph-card { background: var(--white); border: 1px solid var(--line); padding: 12px 12px 0; box-shadow: 0 14px 30px rgba(16, 49, 107, .1); }
+        .ph-card .frame { aspect-ratio: 4/3; overflow: hidden; border: 1px solid var(--line); }
+        .ph-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+        .ph-card:hover img { transform: scale(1.04); }
+        .ph-card figcaption {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 13px 4px; font-size: 14px; font-weight: 600; color: var(--ink-strong);
+        }
+        .ph-card figcaption span { font-family: var(--mono); font-size: 10.5px; letter-spacing: .14em; color: var(--ink-soft); }
+        .ph-note { margin-top: 28px; text-align: center; font-size: 14px; color: var(--ink-soft); }
+        .ph-note b { color: var(--ink-strong); }
+
+        /* ===================== 인증/수상 ===================== */
+        .award-strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
+        .award { background: var(--white); border: 1px solid var(--line); padding: 9px; cursor: zoom-in; transition: transform .2s, box-shadow .2s; }
+        .award:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(16, 49, 107, .14); }
+        .award img { aspect-ratio: 3/4; object-fit: cover; width: 100%; }
+        .award figcaption { font-size: 11.5px; font-weight: 600; margin-top: 8px; text-align: center; color: var(--ink-soft); }
+
+        .lightbox {
+            position: fixed; inset: 0; z-index: 200;
+            background: rgba(10, 31, 71, .9);
+            display: none; align-items: center; justify-content: center; padding: 5vmin;
+        }
+        .lightbox.open { display: flex; }
+        .lightbox img { max-height: 88vh; max-width: 92vw; border: 4px solid var(--white); }
+        .lightbox .close {
+            position: absolute; top: 22px; right: 26px;
+            font-family: var(--mono); font-size: 14px; letter-spacing: .12em;
+            color: var(--white); background: none; border: 1px solid var(--white);
+            padding: 8px 16px; cursor: pointer;
+        }
+
+        /* ===================== FAQ ===================== */
+        .faq-list { max-width: 800px; border-top: 1.5px solid var(--ink); }
+        .faq-list details { border-bottom: 1px solid var(--line); background: transparent; }
+        .faq-list summary {
+            cursor: pointer; list-style: none;
+            padding: 22px 8px; font-weight: 700; font-size: 16.5px; color: var(--ink-strong);
+            display: flex; align-items: center; gap: 16px;
+        }
+        .faq-list summary::-webkit-details-marker { display: none; }
+        .faq-list summary .qno { font-family: var(--mono); font-size: 12px; color: var(--blue); letter-spacing: .12em; }
+        .faq-list summary span.t { flex: 1; }
+        .faq-list summary::after { content: '+'; font-family: var(--mono); font-size: 20px; color: var(--ink-soft); transition: transform .2s; }
+        .faq-list details[open] summary::after { transform: rotate(45deg); color: var(--blue); }
+        .faq-list .a { padding: 0 8px 24px 58px; color: var(--ink-soft); font-size: 15px; }
+        .faq-list .a a { color: var(--blue); font-weight: 600; text-decoration: underline; }
+
+        /* ===================== 견적 문의 ===================== */
+        .contact { background: var(--ink); color: var(--paper); }
+        .contact .mlabel { color: #8FB4F4; }
+        .contact .mlabel::before { background: #8FB4F4; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        .contact h2 { font-size: clamp(28px, 3.8vw, 42px); font-weight: 700; letter-spacing: -.02em; line-height: 1.3; margin-top: 16px; }
+        .contact .lede { margin-top: 16px; font-size: 16px; color: rgba(245, 247, 250, .75); }
+        .c-channels { margin-top: 36px; display: grid; gap: 1px; background: rgba(245, 247, 250, .2); border: 1px solid rgba(245, 247, 250, .2); }
+        .c-line {
+            display: flex; align-items: center; gap: 18px;
+            background: var(--ink); padding: 18px 22px;
+            transition: background .2s;
+        }
+        .c-line:hover { background: var(--ink-strong); }
+        .c-line .ico { font-family: var(--mono); font-size: 10.5px; letter-spacing: .16em; color: #8FB4F4; width: 44px; flex-shrink: 0; }
+        .c-line b { font-size: 17px; }
+        .c-line small { display: block; color: rgba(245, 247, 250, .6); font-size: 12.5px; }
+
+        .q-form { background: var(--white); color: var(--ink); padding: 40px 36px; position: relative; }
+        .q-form::before {
+            content: 'FORM NO. BT-01'; position: absolute; top: -13px; left: 24px;
+            font-family: var(--mono); font-size: 11px; letter-spacing: .18em;
+            background: var(--blue); color: #fff; padding: 4px 12px;
+        }
+        .q-form h3 { font-size: 21px; font-weight: 700; color: var(--ink-strong); }
+        .q-form p.note { font-size: 13px; color: var(--ink-soft); margin: 6px 0 24px; }
+        .field { margin-bottom: 18px; }
+        .field label { display: block; font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: .14em; margin-bottom: 7px; color: var(--ink-soft); }
+        .field input, .field select, .field textarea {
+            width: 100%; font-family: var(--sans); font-size: 15px;
+            padding: 12px 14px; background: var(--paper);
+            border: 1px solid var(--line); color: var(--ink-strong);
+            border-radius: 2px; outline: none; transition: border-color .15s, box-shadow .15s;
+        }
+        .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(27, 87, 214, .15); }
+        .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .q-form .btn-primary { width: 100%; justify-content: center; margin-top: 4px; }
+
+        /* ===================== 푸터 (표제란) ===================== */
+        footer { border-top: 1.5px solid var(--ink); background: var(--white); padding-bottom: 90px; }
+        .title-block {
+            display: grid; grid-template-columns: 1.2fr 1fr 1fr;
+            border-left: 1.5px solid var(--ink); border-right: 1.5px solid var(--ink);
+        }
+        .tb-cell { padding: 28px 26px 30px; border-right: 1px solid var(--line); }
+        .tb-cell:last-child { border-right: 0; }
+        .tb-cell h4 { font-family: var(--mono); font-size: 11px; letter-spacing: .22em; color: var(--blue); margin-bottom: 14px; }
+        .tb-cell p, .tb-cell li { font-size: 13.5px; margin-bottom: 6px; color: var(--ink-soft); }
+        .tb-cell b { color: var(--ink-strong); }
+        .tb-cell a:hover { color: var(--blue); }
+        .tb-cell .logo-img { height: 46px; width: auto; filter: invert(.75) sepia(.4) saturate(4) hue-rotate(190deg) brightness(.55); margin-bottom: 14px; }
+        .f-bottom {
+            border-top: 1.5px solid var(--ink);
+            padding: 18px 26px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+            font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; color: var(--ink-soft);
+        }
+
+        /* 모바일 고정 CTA */
+        .mobile-bar {
+            display: none;
+            position: fixed; left: 0; right: 0; bottom: 0; z-index: 150;
+            background: var(--ink-strong); border-top: 2px solid var(--blue);
+        }
+        .mobile-bar a { flex: 1; text-align: center; padding: 15px 8px; font-weight: 700; font-size: 14.5px; color: var(--paper); }
+        .mobile-bar a + a { border-left: 1px solid rgba(245, 247, 250, .2); }
+        .mobile-bar a.hot { background: var(--blue); color: #fff; }
+
+        /* ===================== 반응형 ===================== */
+        @media (max-width: 980px) {
+            .hero-grid, .net-grid, .contact-grid { grid-template-columns: 1fr; }
+            .spec-grid { grid-template-columns: 1fr 1fr; }
+            .spec:nth-child(3) { border-left: 0; }
+            .spec { border-top: 1px solid rgba(245, 247, 250, .18); }
+            .spec:nth-child(-n+2) { border-top: 0; }
+            .value-grid { grid-template-columns: 1fr; }
+            .v-card + .v-card { border-left: 0; border-top: 1px solid var(--line); }
+            .flow { grid-template-columns: 1fr 1fr; gap: 30px 26px; }
+            .f-step::after { display: none; }
+            .ph-grid { grid-template-columns: 1fr 1fr; }
+            .award-strip { grid-template-columns: repeat(3, 1fr); }
+            .title-block { grid-template-columns: 1fr; }
+            .tb-cell { border-right: 0; border-bottom: 1px solid var(--line); }
+            .dwg-no { display: none; }
+        }
+        @media (max-width: 720px) {
+            .nav-links {
+                display: none; position: absolute; top: 64px; left: 0; right: 0;
+                flex-direction: column; gap: 0;
+                background: var(--paper); border-bottom: 1px solid var(--line);
+            }
+            .nav-links.open { display: flex; }
+            .nav-links a { padding: 15px 24px; border-top: 1px solid var(--line); }
+            .menu-btn { display: block; }
+            .nav-cta { display: none; }
+            .brand .doc { display: none; }
+            .hero { padding-top: 124px; }
+            .flow, .ph-grid { grid-template-columns: 1fr; }
+            .award-strip { grid-template-columns: repeat(2, 1fr); }
+            .field-row { grid-template-columns: 1fr; }
+            .mobile-bar { display: flex; }
+            footer { padding-bottom: 130px; }
+        }
+    </style>
 </head>
 <body>
-<!--<script>-->
-<!--  (function(){var w=window;if(w.ChannelIO){return w.console.error("ChannelIO script included twice.");}var ch=function(){ch.c(arguments);};ch.q=[];ch.c=function(args){ch.q.push(args);};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return;}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x);}}if(document.readyState==="complete"){l();}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l);}})();-->
 
-<!--  ChannelIO('boot', {-->
-<!--    "pluginKey": "388b2d6c-6970-42f0-a523-a2b6653d17b7",-->
-<!--    "memberId": "USER_MEMBER_ID", // fill user's member id-->
-<!--    "profile": { // fill user's profile-->
-<!--      "name": "USER_NAME", // fill user's name-->
-<!--      "mobileNumber": "USER_MOBILE_NUMBER", // fill user's mobile number-->
-<!--      "landlineNumber": "USER_LANDLINE_NUMBER", // fill user's landline number-->
-<!--      "CUSTOM_VALUE_1": "VALUE_1", // custom property-->
-<!--      "CUSTOM_VALUE_2": "VALUE_2" // custom property-->
-<!--    }-->
-<!--  });-->
-<!--</script>-->
+<!-- 채널톡 -->
 <script>
     (function () {
         var w = window;
-        if (w.ChannelIO) {
-            return w.console.error("ChannelIO script included twice.");
-        }
-        var ch = function () {
-            ch.c(arguments);
-        };
+        if (w.ChannelIO) return w.console.error("ChannelIO script included twice.");
+        var ch = function () { ch.c(arguments); };
         ch.q = [];
-        ch.c = function (args) {
-            ch.q.push(args);
-        };
+        ch.c = function (args) { ch.q.push(args); };
         w.ChannelIO = ch;
-
         function l() {
-            if (w.ChannelIOInitialized) {
-                return;
-            }
+            if (w.ChannelIOInitialized) return;
             w.ChannelIOInitialized = true;
             var s = document.createElement("script");
-            s.type = "text/javascript";
-            s.async = true;
+            s.type = "text/javascript"; s.async = true;
             s.src = "https://cdn.channel.io/plugin/ch-plugin-web.js";
             var x = document.getElementsByTagName("script")[0];
-            if (x.parentNode) {
-                x.parentNode.insertBefore(s, x);
-            }
+            if (x.parentNode) x.parentNode.insertBefore(s, x);
         }
-
-        if (document.readyState === "complete") {
-            l();
-        } else {
-            w.addEventListener("DOMContentLoaded", l);
-            w.addEventListener("load", l);
-        }
+        if (document.readyState === "complete") l();
+        else { w.addEventListener("DOMContentLoaded", l); w.addEventListener("load", l); }
     })();
-
-    ChannelIO('boot', {
-        "pluginKey": "388b2d6c-6970-42f0-a523-a2b6653d17b7"
-    });
+    ChannelIO('boot', { "pluginKey": "388b2d6c-6970-42f0-a523-a2b6653d17b7" });
 </script>
-<header class="fixed w-full">
-    <nav class=" py-2.5 dark:bg-gray-900 bg-main">
-        <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
-            <a href="#" class="flex items-center">
-                <img src="./images/boxtopia_logo.png" class="h-10 mr-3 sm:h-9" alt="boxtopia Logo"/>
-                <!--                    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">boxtopia</span>-->
-            </a>
-            <div class="flex items-center lg:order-2">
-                <!--                    <div class="hidden mt-2 mr-4 sm:inline-block">-->
-                <!--                        <a class="github-button" href="https://github.com/themesberg/landwind" data-size="large" data-icon="octicon-star" data-show-count="true" aria-label="Star themesberg/landwind on GitHub">Star</a>-->
-                <!--                    </div>-->
-                <!-- <a href="#" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Log in</a> -->
-                <!--                <a href="https://themesberg.com/product/tailwind-css/landing-page"-->
-                <!--                   class="text-white bg-amber-600 hover:bg-amber-700 focus:ring-4 focus:ring-amber-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-amber-600 dark:hover:bg-amber-700 focus:outline-none dark:focus:ring-amber-800">Download</a>-->
-                <button data-collapse-toggle="mobile-menu-2" type="button"
-                        class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                        aria-controls="mobile-menu-2" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                              clip-rule="evenodd"></path>
-                    </svg>
-                    <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                              clip-rule="evenodd"></path>
-                    </svg>
-                </button>
-            </div>
-            <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
-                <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                    <li>
-                        <a href="#section1"
-                           class="block py-2 pl-3 pr-4 text-white  rounded lg:bg-transparent lg:p-0 dark:text-white"
-                           aria-current="page">홈</a>
-                    </li>
-                    <li>
-                        <a href="#section2"
-                           class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">장점</a>
-                    </li>
-                    <li>
-                        <a href="#section3"
-                           class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">소개</a>
-                    </li>
-                    <li>
-                        <a href="#section4"
-                           class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">공장
-                            주소</a>
-                    </li>
-                    <li>
-                        <a href="#section5"
-                           class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">인증
-                            / 수상</a>
-                    </li>
-                    <li>
-                        <a href="#section6"
-                           class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">문의</a>
-                    </li>
-                    <li>
-                        <a href="#section7"
-                           class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">자주
-                            묻는 질문</a>
-                    </li>
 
-                    <li>
-                        <a href="#section8"
-                           class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-amber-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">최신
-                            소식</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<!-- ===================== 헤더 ===================== -->
+<header>
+    <div class="wrap nav">
+        <a href="#top" class="brand">
+            <span class="mark">BOX<b>TOPIA</b></span>
+            <span class="doc">DWG. 박스토피아 — REV.2026</span>
+        </a>
+        <nav class="nav-links" id="navLinks">
+            <a href="#network">공장 네트워크</a>
+            <a href="#process">진행 과정</a>
+            <a href="#facility">생산 현장</a>
+            <a href="#awards">인증·수상</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+        <a href="#contact" class="nav-cta">견적 문의</a>
+        <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기">☰</button>
+    </div>
 </header>
 
-<!-- Start block 인스타그램 링크 연결 -->
-<section class="bg-white dark:bg-gray-900">
-    <div class="grid max-w-screen-xl px-4 pt-28 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-40"
-         id="section1">
-        <div class="mr-auto place-self-center lg:col-span-7">
-            <!--                        박스토피아는 5개의 공장을 보유하고 있으며,
-                                        전국 190여개의 공장과 협업하고 있습니다.-->
-            <h1 class="max-w-2xl mb-4 text-3xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-5xl dark:text-white">
-                <span class="block mb-2 ">박스토피아는</span>
-                <span class="block mb-2">5개의 공장을 보유하고 있으며,</span>
-                <span class="block mb-2">전국  &nbsp;'190여개' &nbsp; 의 공장과 협업하고</span>
-                <span class="block mb-5">있습니다.</span>
+<!-- ===================== 히어로 ===================== -->
+<section class="hero" id="top">
+    <div class="wrap hero-grid">
+        <div>
+            <span class="mlabel rv on">CUSTOM BOX ENGINEERING &amp; MATCHING</span>
+            <h1 class="rv on">
+                좋은 박스는<br>
+                <mark>정확한 설계</mark>에서<br>
+                시작됩니다
             </h1>
-
-            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-                - 믿을 수 있는 제조사와의 ‘직접 계약’<br>
-                - 지역에 따른 공장 매칭으로 인한 ‘운영비 절감’<br>
-                - 전문가들로 부터 중개 커뮤니케이션 ‘대행’<br>
-                <strong class="font-extrabold"> - 박스 토피아는 자체적인 공장을 별도로 운영하고 있어, 많은 관심 부탁드립니다.</strong>
-                <!--            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 font-bold">- 박스 토피아는 자체적인 공장을 별도로 운영하고 있어, 많은 관심 부탁드립니다.<br></p>-->
-
-            <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-                <!--                    <a href="https://github.com/themesberg/landwind" class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-gray-900 border border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">-->
-                <!--                        <svg class="w-4 h-4 mr-2 text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">&lt;!&ndash; Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) &ndash;&gt;<path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> View on GitHub-->
-                <!--                    </a>-->
-                <!--                    <a href="https://www.figma.com/community/file/1125744163617429490" class="inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:w-auto focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">-->
-                <!--                        <svg class="w-4 h-4 mr-2" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="1667" height="2500"><style type="text/css">.st0{fill:#0acf83}.st1{fill:#a259ff}.st2{fill:#f24e1e}.st3{fill:#ff7262}.st4{fill:#1abcfe}</style><title>Figma.logo</title><desc>Created using Figma</desc><path id="path0_fill" class="st0" d="M50 300c27.6 0 50-22.4 50-50v-50H50c-27.6 0-50 22.4-50 50s22.4 50 50 50z"/><path id="path1_fill" class="st1" d="M0 150c0-27.6 22.4-50 50-50h50v100H50c-27.6 0-50-22.4-50-50z"/><path id="path1_fill_1_" class="st2" d="M0 50C0 22.4 22.4 0 50 0h50v100H50C22.4 100 0 77.6 0 50z"/><path id="path2_fill" class="st3" d="M100 0h50c27.6 0 50 22.4 50 50s-22.4 50-50 50h-50V0z"/><path id="path3_fill" class="st4" d="M200 150c0 27.6-22.4 50-50 50s-50-22.4-50-50 22.4-50 50-50 50 22.4 50 50z"/></svg> Get Figma file-->
-                <!--                    </a>-->
-                <a href="https://www.instagram.com/boxtopia.co.kr" target="_blank"
-                   class="inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:w-auto focus:outline-none hover:bg-gray-100 hover:text-yellow-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                              d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                              clip-rule="evenodd"/>
-                    </svg>
-                    &nbsp; 박스토피아 인스타그램
-                </a>
-
-
+            <p class="lede rv on rv-d1">
+                박스토피아는 <strong>직영 공장 5곳</strong>과 <strong>전국 190여 협력 공장</strong> 중
+                위치·가격·품질·납기를 비교해 최적의 공장을 매칭하는
+                박스 제작 전문 파트너입니다.
+            </p>
+            <div class="btn-row rv on rv-d2">
+                <a href="#contact" class="btn btn-primary">견적 의뢰하기 →</a>
+                <button class="btn btn-ghost" onclick="ChannelIO('showMessenger')">실시간 상담</button>
+            </div>
+            <div class="hero-foot rv on rv-d3">
+                <span>TEL <b>031-536-0844</b></span>
+                <span>MAIL <b>goguryeo.box@gmail.com</b></span>
             </div>
         </div>
-        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img src="./images/main.jpg" alt="hero image">
+        <aside class="draft rv on rv-d2" aria-hidden="true">
+            <div class="d-head">
+                <span>DRAWING — RSC BOX / 3-VIEW</span>
+                <span class="rev">REV. A</span>
+            </div>
+            <div class="d-body">
+                <!-- 박스 등각투상 도면 + 치수선 -->
+                <svg viewBox="0 0 420 300" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Mono, monospace">
+                    <!-- 등각 박스 본체 -->
+                    <g stroke="#10316B" stroke-width="2">
+                        <path d="M110 130 L210 80 L330 120 L230 175 Z" fill="#E3ECFA"/>
+                        <path d="M110 130 L110 215 L230 262 L230 175 Z" fill="#fff"/>
+                        <path d="M230 175 L330 120 L330 205 L230 262 Z" fill="#D5E2F7"/>
+                        <!-- 덮개 플랩 -->
+                        <path d="M110 130 L160 92 L260 130 L210 80" fill="none" stroke-dasharray="5 4"/>
+                        <path d="M330 120 L290 78 L210 80" fill="none" stroke-dasharray="5 4"/>
+                    </g>
+                    <!-- 중심선 -->
+                    <line x1="170" y1="218" x2="170" y2="120" stroke="#1B57D6" stroke-width="1" stroke-dasharray="8 4 2 4" opacity=".6"/>
+                    <!-- 치수선: 가로 -->
+                    <g stroke="#1B57D6" stroke-width="1.2">
+                        <line x1="110" y1="238" x2="230" y2="285"/>
+                        <line x1="110" y1="222" x2="110" y2="244"/>
+                        <line x1="230" y1="268" x2="230" y2="291"/>
+                    </g>
+                    <text x="146" y="276" fill="#1B57D6" font-size="12" transform="rotate(21 146 276)">W = 주문 사양</text>
+                    <!-- 치수선: 세로 -->
+                    <g stroke="#1B57D6" stroke-width="1.2">
+                        <line x1="92" y1="130" x2="92" y2="215"/>
+                        <line x1="86" y1="130" x2="104" y2="130"/>
+                        <line x1="86" y1="215" x2="104" y2="215"/>
+                    </g>
+                    <text x="80" y="178" fill="#1B57D6" font-size="12" text-anchor="end">H</text>
+                    <!-- 치수선: 깊이 -->
+                    <g stroke="#1B57D6" stroke-width="1.2">
+                        <line x1="245 " y1="268" x2="345" y2="212"/>
+                        <line x1="334" y1="200" x2="345" y2="216"/>
+                    </g>
+                    <text x="318" y="252" fill="#1B57D6" font-size="12" transform="rotate(-29 318 252)">L = 맞춤 제작</text>
+                    <!-- 주석 -->
+                    <g font-size="11" fill="#4A608C">
+                        <text x="352" y="60">NOTE:</text>
+                        <text x="352" y="76">골판지</text>
+                        <text x="352" y="92">A·B·E골</text>
+                    </g>
+                    <circle cx="40" cy="40" r="14" stroke="#10316B" stroke-width="1.5"/>
+                    <line x1="26" y1="40" x2="54" y2="40" stroke="#10316B" stroke-width="1"/>
+                    <line x1="40" y1="26" x2="40" y2="54" stroke="#10316B" stroke-width="1"/>
+                </svg>
+                <span class="stamp">승인<br>PASS</span>
+            </div>
+            <div class="d-spec">
+                <div><span>SCALE</span><b>맞춤 제작 1:1</b></div>
+                <div><span>MATERIAL</span><b>골판지 전 규격</b></div>
+                <div><span>FACTORY</span><b>직영 5 + 협력 190+</b></div>
+                <div><span>CHECKED BY</span><b>박스토피아</b></div>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<!-- ===================== 신뢰 지표 ===================== -->
+<section class="specbar">
+    <div class="wrap" style="padding:0">
+        <div class="spec-grid">
+            <div class="spec rv">
+                <div class="k">OWNED FACTORY</div>
+                <div class="v"><span class="count" data-to="5">0</span></div>
+                <div class="d">경기도 직영 공장</div>
+            </div>
+            <div class="spec rv rv-d1">
+                <div class="k">PARTNER NETWORK</div>
+                <div class="v"><span class="count" data-to="190">0</span><sup>+</sup></div>
+                <div class="d">전국 협력 공장</div>
+            </div>
+            <div class="spec rv rv-d2">
+                <div class="k">EQUIPMENT</div>
+                <div class="v"><span class="count" data-to="3">0</span></div>
+                <div class="d">자동 · 반자동 · 수동 전 설비</div>
+            </div>
+            <div class="spec rv rv-d3">
+                <div class="k">PROCESS</div>
+                <div class="v"><span class="count" data-to="4">0</span></div>
+                <div class="d">의뢰부터 납품까지 4단계</div>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="bg-gray-50 dark:bg-gray-800" id="section2">
-    <div class="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-24 lg:px-6">
-        <!-- Row -->
-        <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-            <div class="text-gray-500 sm:text-lg dark:text-gray-400">
-                <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">박스토피아만의 장점</h2>
-                <p class="mb-8 font-light lg:text-xl">환영합니다! 선진적인 박스 공장의 세계로 여러분을 초대합니다.<br>
-                    우리 공장의 특별한 서비스를 소개합니다.</p>
-                <!-- List -->
-                <ul role="list" class="pt-8 space-y-5 border-t border-gray-200 my-7 dark:border-gray-700">
-                    <li class="flex space-x-3">
-                        <!-- Icon -->
-                        <svg class="flex-shrink-0 w-5 h-5 text-amber-500 dark:text-amber-400"
-                             fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                  clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">소비자들에게 맞춤 박스 공장 추천</span>
-                    </li>
-                    <li class="flex space-x-3">
-                        <!-- Icon -->
-                        <svg class="flex-shrink-0 w-5 h-5 text-amber-500 dark:text-amber-400"
-                             fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                  clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">온라인 주문 트래킹</span>
-                    </li>
-                    <li class="flex space-x-3">
-                        <!-- Icon -->
-                        <svg class="flex-shrink-0 w-5 h-5 text-amber-500 dark:text-amber-400"
-                             fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                  clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">자체 공장 보유로 인한 전문성 보유</span>
-                    </li>
-                    <!--                    <li class="flex space-x-3">-->
-                    <!--                        &lt;!&ndash; Icon &ndash;&gt;-->
-                    <!--                        <svg class="flex-shrink-0 w-5 h-5 text-amber-500 dark:text-amber-400"-->
-                    <!--                             fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">-->
-                    <!--                            <path fill-rule="evenodd"-->
-                    <!--                                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"-->
-                    <!--                                  clip-rule="evenodd"></path>-->
-                    <!--                        </svg>-->
-                    <!--                        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">온라인 주문 트래킹</span>-->
-                    <!--                    </li>-->
+<!-- ===================== 강점 ===================== -->
+<section class="sec" id="value">
+    <span class="dwg-no">SHEET 02 / 강점</span>
+    <div class="wrap">
+        <div class="sec-head rv">
+            <span class="mlabel">WHY BOXTOPIA</span>
+            <h2>공장을 직접 찾는 수고,<br>저희가 대신합니다</h2>
+            <p>박스토피아는 자체 생산라인을 운영하는 제조사이자, 전국 공장 네트워크를 연결하는 매칭 파트너입니다.</p>
+        </div>
+        <div class="value-grid rv">
+            <div class="v-card">
+                <span class="no">SPEC — 01</span>
+                <h3>제조사와 직접 계약</h3>
+                <p>검증된 제조사와 직접 계약 방식으로 진행해 중간 유통 거품을 줄입니다. 믿을 수 있는 공장만 연결합니다.</p>
+            </div>
+            <div class="v-card">
+                <span class="no">SPEC — 02</span>
+                <h3>지역 기반 공장 매칭</h3>
+                <p>납품지와 가까운 공장을 매칭해 운임비와 운영비를 절감합니다. 위치·가격·품질·납기를 종합 비교해 추천합니다.</p>
+            </div>
+            <div class="v-card">
+                <span class="no">SPEC — 03</span>
+                <h3>전문가의 소통 대행</h3>
+                <p>규격, 재질, 인쇄 사양 — 공장과의 까다로운 커뮤니케이션을 박스 전문가가 처음부터 끝까지 대행합니다.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== 공장 네트워크 ===================== -->
+<section class="sec" id="network" style="padding-top:0">
+    <span class="dwg-no" style="top:-12px">SHEET 03 / 네트워크</span>
+    <div class="wrap">
+        <div class="sec-head rv">
+            <span class="mlabel">FACTORY NETWORK</span>
+            <h2>직영 공장의 전문성,<br>전국 네트워크의 유연함</h2>
+            <p>자체 공장을 직접 운영하기에 품질을 알고, 전국 네트워크가 있기에 어떤 주문도 소화합니다.</p>
+        </div>
+        <div class="net-grid">
+            <div class="net-card rv">
+                <div class="n-head"><h3>경기도 직영 공장</h3><span class="code">TYPE — OWNED</span></div>
+                <div class="n-num">5<small>개소</small></div>
+                <p class="n-desc">자동·반자동·수동 설비를 모두 보유해 소량 주문부터 대량 생산까지 모든 주문 제작이 가능합니다.</p>
+                <ul class="addr">
+                    <li><b>NO.1</b> 경기도 포천시 신북면 신창길 27</li>
+                    <li><b>NO.2</b> 경기도 포천시 신북면 신창길 71-81</li>
+                    <li><b>NO.3</b> 경기도 남양주시 진접읍 부마로 54-15</li>
+                    <li><b>NO.4</b> 경기도 포천시 가산면 금현리 1153-5</li>
+                    <li><b>NO.5</b> 경기도 포천시 창수면 주원리 391-3</li>
                 </ul>
-                <!--                <p class="mb-8 font-light lg:text-xl">우리 공장은 고객의 요구를 중심으로 최상의 서비스를 제공하기 위해 끊임없이 노력하고 있습니다. 오늘날의 기술과 전통적인-->
-                <!--                    장인정신을 결합하여 최고의 박스 제품을 만들어내는 것이 우리의 목표입니다.</p>-->
             </div>
-            <div class="flex justify-end">
-                <img class="hidden w-full  mb-4 rounded-lg lg:mb-0 lg:ml-10 lg:flex max-h-96"
-                     src="./images/IMG_5110.JPG"
-                     alt="factory feature image">
-            </div>
-        </div>
-
-    </div>
-</section>
-<!-- End block -->
-<!-- Start block -->
-<section class=" bg-white dark:bg-gray-900 overflow-x-auto" id="section3">
-    <div class="py-8 space-y-12 lg:space-y-20 lg:py-24 lg:px-6">
-        <h2 class="static mb-2 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">소개</h2>
-        <div class="overflow-x-auto">
-            <div class="flex flex-row">
-                <div class="max-w-screen-xl container mx-auto px-4 py-8 flex justify-between items-center">
-                    <!--            max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-24 lg:px-6-->
-                    <!-- 스텝 1 -->
-
-                    <div class="flex flex-col items-center">
-                        <div class="w-16 h-8 flex items-center justify-center rounded-full bg-amber-500 text-white mb-4">
-                            Step 1
-                        </div>
-
-                        <svg class="w-16 h-16 mb-4 text-amber-600 md:w-12 md:h-12 dark:text-amber-500"
-                             fill="currentColor"
-                             xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                            <path d="M560-520h280v-200H560v200Zm140-50-100-70v-40l100 70 100-70v40l-100 70ZM80-120q-33 0-56.5-23.5T0-200v-560q0-33 23.5-56.5T80-840h800q33 0 56.5 23.5T960-760v560q0 33-23.5 56.5T880-120H80Zm556-80h244v-560H80v560h4q42-75 116-117.5T360-360q86 0 160 42.5T636-200ZM360-400q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35ZM182-200h356q-34-38-80.5-59T360-280q-51 0-97 21t-81 59Zm178-280q-17 0-28.5-11.5T320-520q0-17 11.5-28.5T360-560q17 0 28.5 11.5T400-520q0 17-11.5 28.5T360-480Zm120 0Z"/>
-                        </svg>
-
-                        <!--        <img src="path_to_your_image_1.png" alt="박스로고" class="w-16 h-16 mb-4">-->
-                        <h2 class="text-center text-xl mb-4">박스토피아 의뢰</h2>
-                        <p class="text-center w-48">고객이 원하는 요구 사항을 전달합니다.</p>
-                    </div>
-
-                    <!-- 화살표 -->
-                    <div class="mx-8 text-3xl text-amber-500 font-bold "> ></div>
-
-
-                    <!-- 스텝 2 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-16 h-8 flex items-center justify-center rounded-full bg-amber-500 text-white mb-4">
-                            Step 2
-                        </div>
-
-                        <svg class="w-16 h-16 mb-4 text-amber-600 md:w-12 md:h-12 dark:text-amber-500"
-                             fill="currentColor"
-                             xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                            <path d="m590-160 80 80H240q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h360l200 240v480q0 20-8.5 36.5T768-96L560-302q-17 11-37 16.5t-43 5.5q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 23-5.5 43T618-360l102 104v-356L562-800H240v640h350ZM480-360q33 0 56.5-23.5T560-440q0-33-23.5-56.5T480-520q-33 0-56.5 23.5T400-440q0 33 23.5 56.5T480-360Zm0-80Zm0 0Z"/>
-                        </svg>
-                        <h2 class="text-center text-xl mb-4">공장 추천 확인</h2>
-                        <p class="text-center w-48">위치, 가격, 품질, 배송을 기반 최적의 공장을 추천합니다.</p>
-                    </div>
-
-                    <!-- 화살표 -->
-                    <div class="mx-8 text-3xl text-amber-500 font-bold "> ></div>
-
-                    <!-- 스텝 3 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-16 h-8 flex items-center justify-center rounded-full bg-amber-500 text-white mb-4">
-                            Step 3
-                        </div>
-                        <svg class="w-16 h-16 mb-4 text-amber-600 md:w-12 md:h-12 dark:text-amber-500"
-                             fill="currentColor"
-                             xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                            <path d="M80-80v-481l280-119v80l200-80v120h320v480H80Zm80-80h640v-320H480v-82l-200 80v-78l-120 53v347Zm280-80h80v-160h-80v160Zm-160 0h80v-160h-80v160Zm320 0h80v-160h-80v160Zm280-320H680l40-320h120l40 320ZM160-160h640-640Z"/>
-                        </svg>
-
-
-                        <h2 class="text-center text-xl mb-4">생산</h2>
-                        <p class="text-center w-48">선택된 공장에서 박스를 생산합니다.</p>
-                    </div>
-
-                    <!-- 화살표 -->
-                    <div class="mx-8 text-3xl text-amber-500 font-bold "> ></div>
-
-                    <!-- 스텝 4 -->
-                    <div class="flex flex-col items-center">
-                        <div class="w-16 h-8 flex items-center justify-center rounded-full bg-amber-500 text-white mb-4">
-                            Step 4
-                        </div>
-
-                        <svg class="w-16 h-16 mb-4 text-amber-600 md:w-12 md:h-12 dark:text-amber-500"
-                             fill="currentColor"
-                             xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                            <path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/>
-                        </svg>
-                        <h2 class="text-center text-xl mb-4">납품</h2>
-                        <p class="text-center w-48">생산된 박스를 고객에게 납품합니다.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- End block -->
-    <!--    <div class="items-center max-w-screen-xl px-4 py-8 mx-auto lg:grid lg:grid-cols-4 lg:gap-16 xl:gap-24 lg:py-24 lg:px-6">-->
-    <!--        <div class="col-span-2 mb-8">-->
-    <!--            <p class="text-lg font-medium text-amber-600 dark:text-amber-500">Trusted Worldwide</p>-->
-    <!--            <h2 class="mt-3 mb-4 text-3xl font-extrabold tracking-tight text-gray-900 md:text-3xl dark:text-white">-->
-    <!--                Trusted by over 600 million users and 10,000 teams</h2>-->
-    <!--            <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">Our rigorous security and compliance-->
-    <!--                standards are at the heart of all we do. We work tirelessly to protect you and your customers.</p>-->
-    <!--            <div class="pt-6 mt-6 space-y-4 border-t border-gray-200 dark:border-gray-700">-->
-    <!--                <div>-->
-    <!--                    <a href="#"-->
-    <!--                       class="inline-flex items-center text-base font-medium text-amber-600 hover:text-amber-800 dark:text-amber-500 dark:hover:text-amber-700">-->
-    <!--                        Explore Legality Guide-->
-    <!--                        <svg class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20"-->
-    <!--                             xmlns="http://www.w3.org/2000/svg">-->
-    <!--                            <path fill-rule="evenodd"-->
-    <!--                                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"-->
-    <!--                                  clip-rule="evenodd"></path>-->
-    <!--                        </svg>-->
-    <!--                    </a>-->
-    <!--                </div>-->
-    <!--                <div>-->
-    <!--                    <a href="#"-->
-    <!--                       class="inline-flex items-center text-base font-medium text-amber-600 hover:text-amber-800 dark:text-amber-500 dark:hover:text-amber-700">-->
-    <!--                        Visit the Trust Center-->
-    <!--                        <svg class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20"-->
-    <!--                             xmlns="http://www.w3.org/2000/svg">-->
-    <!--                            <path fill-rule="evenodd"-->
-    <!--                                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"-->
-    <!--                                  clip-rule="evenodd"></path>-->
-    <!--                        </svg>-->
-    <!--                    </a>-->
-    <!--                </div>-->
-    <!--            </div>-->
-
-
-    <!--        </div>-->
-    <!--        <div class="col-span-2 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">-->
-    <!--            <div>-->
-    <!--                <svg class="w-10 h-10 mb-2 text-amber-600 md:w-12 md:h-12 dark:text-amber-500" fill="currentColor"-->
-    <!--                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">-->
-    <!--                    <path fill-rule="evenodd"-->
-    <!--                          d="M2 5a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm14 1a1 1 0 11-2 0 1 1 0 012 0zM2 13a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2zm14 1a1 1 0 11-2 0 1 1 0 012 0z"-->
-    <!--                          clip-rule="evenodd"></path>-->
-    <!--                </svg>-->
-    <!--                &lt;!&ndash;                박스토피아에 의뢰 - > 공장 추천 확인 - > 생산 - > 납품   &ndash;&gt;-->
-    <!--                <h3 class="mb-2 text-2xl font-bold dark:text-white">박스토피아에 의뢰</h3>-->
-    <!--                <p class="font-light text-gray-500 dark:text-gray-400">고객이 원하는 요구 사항을 전달합니다.</p>-->
-    <!--            </div>-->
-    <!--            <div>-->
-    <!--                <svg class="w-10 h-10 mb-2 text-amber-600 md:w-12 md:h-12 dark:text-amber-500" fill="currentColor"-->
-    <!--                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">-->
-    <!--                    <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>-->
-    <!--                </svg>-->
-    <!--                <h3 class="mb-2 text-2xl font-bold dark:text-white">공장 추천 확인</h3>-->
-    <!--                <p class="font-light text-gray-500 dark:text-gray-400">위치, 가격, 품질, 납기를 기반으로 최적의 공장을 추천합니다.</p>-->
-    <!--            </div>-->
-    <!--            <div>-->
-    <!--                <svg class="w-10 h-10 mb-2 text-amber-600 md:w-12 md:h-12 dark:text-amber-500" fill="currentColor"-->
-    <!--                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">-->
-    <!--                    <path fill-rule="evenodd"-->
-    <!--                          d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z"-->
-    <!--                          clip-rule="evenodd"></path>-->
-    <!--                </svg>-->
-    <!--                <h3 class="mb-2 text-2xl font-bold dark:text-white">생산</h3>-->
-    <!--                <p class="font-light text-gray-500 dark:text-gray-400">선택된 공장에서 박스를 생산합니다.</p>-->
-    <!--            </div>-->
-    <!--            <div>-->
-    <!--                <svg class="w-10 h-10 mb-2 text-amber-600 md:w-12 md:h-12 dark:text-amber-500" fill="currentColor"-->
-    <!--                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">-->
-    <!--                    <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>-->
-    <!--                </svg>-->
-    <!--                <h3 class="mb-2 text-2xl font-bold dark:text-white">납품</h3>-->
-    <!--                <p class="font-light text-gray-500 dark:text-gray-400">생산된 박스를 고객에게 납품합니다.</p>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-</section>
-
-<!-- End block -->
-
-<!-- Start block -->
-<section class="bg-gray-50 dark:bg-gray-800" id="section4">
-    <div class="max-w-screen-xl px-4 py-8 mx-auto  lg:py-24 lg:px-6">
-        <!--        <figure class="max-w-screen-md mx-auto">-->
-        <figure class="mx-auto">
-            <!--            <svg class="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600" viewBox="0 0 24 27" fill="none"-->
-            <!--                 xmlns="http://www.w3.org/2000/svg">-->
-            <!--                <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"-->
-            <!--                      fill="currentColor"/>-->
-            <!--            </svg>-->
-            <blockquote>
-                <p class="text-xl font-medium text-gray-900 md:text-2xl dark:text-white">
-                    <span class="block mb-2"> 1공장 : 경기도 포천시 신북면 신창길 27
-                        <!--                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">-->
-                        <!--  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />-->
-                        <!--  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />-->
-                        <!--</svg>-->
-
-                    </span>
-                    <span class="block mb-2"> 2공장 : 경기도 포천시 신북면 신창길 71-81 </span>
-                    <span class="block mb-2"> 3공장 : 경기도 남양주시 진접읍 부마로 54-15 </span>
-                    <span class="block mb-2"> 4공장 : 경기도 포천시 가산면 금현리 1153-5 </span>
-                    <span class="block mb-2"> 5공장 : 경기도 포천시 창수면 주원리 391-3 </span>
-
-                </p>
-            </blockquote>
-            <figcaption class="flex items-center  mt-6 space-x-3">
-
-                <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                    <div class="pr-3 font-medium text-gray-900 dark:text-white">박스토피아</div>
-                    <div class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">공장 주소</div>
-                </div>
-            </figcaption>
-        </figure>
-    </div>
-</section>
-<!-- End block -->
-
-<!-- Start block -->
-<script>
-    function openModal() {
-        let modal = document.getElementById('myModal');
-        modal.style.display = "flex";
-        setTimeout(() => {
-            modal.style.opacity = "1";
-        }, 10); // 이 시간은 효과를 즉시 시작하기 위한 짧은 지연시간입니다.
-    }
-
-    function closeModal() {
-        let modal = document.getElementById('myModal');
-        modal.style.opacity = "0";
-        setTimeout(() => {
-            modal.style.display = "none";
-        }, 300); // 이 시간은 transition의 시간과 일치해야 합니다.
-    }
-
-    // 모달 외부 클릭 시 닫기
-    window.onclick = function (event) {
-        let modal = document.getElementById('myModal');
-        if (event.target === modal) {
-            closeModal();
-        }
-    }
-
-    var slideIndex = 1;
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var slides = document.getElementsByClassName("mySlides");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (var i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slides[slideIndex - 1].style.display = "block";
-    }
-
-</script>
-<!-- 공장 관련 업무 상장 및 특허 갤러리 -->
-<section id="section5">
-    <div class="max-w-screen-xl py-8 lg:py-16 px-4 mx-auto ">
-        <h2 class="mb-6 text-3xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">인증 / 수상</h2>
-        <div class="flex justify-around p-4 md:h-60 lg:h-96">
-            <!--            <div class="grid grid-cols-3 ">-->
-            <img src="images/prize2/(수정본)덕성여대%20창업경진대회_2023_04.jpg" alt="상장1" class="w-1/4 cursor-pointer"
-                 onclick="openModal();currentSlide(1)">
-            <img src="./images/prize2/청년 창업 아이디어 경진대회_2020_11.jpg" alt="상장2" class="w-1/4 cursor-pointer"
-                 onclick="openModal();currentSlide(2)">
-            <img src="images/prize2/서울 시립대학교 창업경진대회_2020_02.png" alt="상장3" class="w-1/4 cursor-pointer"
-                 onclick="openModal();currentSlide(3)">
-
-        </div>
-        <div class="flex justify-around p-4 md:h-60 lg:h-96">
-            <!--            <div class="grid grid-cols-3 ">-->
-            <img src="./images/prize2/대구광역시 수상_2019_12.jpg" alt="상장4" class="w-1/4 cursor-pointer"
-                 onclick="openModal();currentSlide(4)">
-            <img src="./images/prize2/문화예술교육 수료증_2019_07.jpg" alt="상장5" class="w-1/4 cursor-pointer"
-                 onclick="openModal();currentSlide(5)">
-            <img src="images/prize/스타트업캠퍼스수료증2019_02.png" alt="상장6" class="w-1/4 cursor-pointer"
-                 onclick="openModal();currentSlide(6)">
-        </div>
-
-        <!-- 팝업 모달 -->
-
-        <div id="myModal"
-             class="fixed inset-0 flex items-center justify-center p-4 hidden bg-black bg-opacity-70 transition-opacity duration-300"
-             style="opacity: 1;">
-            <div class="max-w-[60%] lg:max-w-[40%] 2xl:max-w-[30%] bg-white p-2 rounded relative">
-                <!-- relative 위치 지정 추가 -->
-                <span class="absolute top-4 right-4 text-white text-3xl cursor-pointer hover:opacity-100 opacity-80 transition-opacity duration-300 bg-black rounded-full p-1 flex items-center justify-center w-8 h-8"
-                      onclick="closeModal()">&times;</span><!-- 위치 및 hover 효과 수정 -->
-                <div class="mySlides hidden">
-                    <img src="images/prize2/(수정본)덕성여대%20창업경진대회_2023_04.jpg" alt="상장1" class="max-w-full ">
-                </div>
-                <div class="mySlides hidden">
-                    <img src="./images/prize2/청년 창업 아이디어 경진대회_2020_11.jpg" alt="상장2" class="max-w-full ">
-                </div>
-                <div class="mySlides hidden">
-                    <img src="images/prize2/서울 시립대학교 창업경진대회_2020_02.png" alt="상장3" class="max-w-full">
-                </div>
-                <div class="mySlides hidden">
-                    <img src="images/prize2/대구광역시 수상_2019_12.jpg" alt="상장4" class="max-w-full">
-                </div>
-                <div class="mySlides hidden">
-                    <img src="images/prize2/문화예술교육 수료증_2019_07.jpg" alt="상장5" class="max-w-full">
-                </div>
-                <div class="mySlides hidden">
-                    <img src="images/prize/스타트업캠퍼스수료증2019_02.png" alt="상장6" class="max-w-full ">
-                </div>
-
+            <div class="net-card rv rv-d1">
+                <div class="n-head"><h3>전국 협력 공장</h3><span class="code">TYPE — PARTNER</span></div>
+                <div class="n-num">190<small>+ 네트워크</small></div>
+                <p class="n-desc">전국 어디든, 어떤 사양이든. 검증된 협력 공장 네트워크로 최적의 생산처를 연결합니다.</p>
+                <ul class="npoints">
+                    <li>납품지 인근 공장 매칭으로 운임비 절감</li>
+                    <li>위치 · 가격 · 품질 · 납기 종합 비교 추천</li>
+                    <li>전문성이 검증된 제휴 공장만 연결</li>
+                    <li>특수 사양 · 대량 주문도 네트워크로 대응</li>
+                    <li>온라인 주문 트래킹 지원</li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
-<!-- End block -->
 
-
-<!-- Start block -->
-<section class=" bg-gray-50 dark:bg-gray-800" id="section6">
-    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-        <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">제품 문의 및 제휴
-            문의 </h2>
-        <p class=" mb-4 font-medium leading-tight text-center text-gray-900 dark:text-white"> 고객센터 : 031)536-0844 </p>
-        <p class="mb-8 lg:mb-8  text-center "> * 오른쪽 하단에 위치한 채널톡을 통해 실시간으로 문의하실 수 있습니다. </p>
-        <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">제품 문의 및 제휴 문의 모두
-            환영합니다. 제품에 대한 궁금증, 주문, 제휴에 관한 문의나 특별한 요청사항이 있으시면 언제든지 연락주세요.
-        </p>
-
-
-        <!--        <form action="https://stibee.com/api/v1.0/lists/ybIIyJBs4VEOIwLTVO7Z0RU25Gl7HQ==/public/subscribers"-->
-        <!--              method="POST" target="_blank" accept-charset="utf-8" class="stb_form space-y-8" name="stb_subscribe_form"-->
-        <!--              id="stb_subscribe_form" novalidate>-->
-        <!--            <div>-->
-        <!--                <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">전화번호:</label>-->
-        <!--                <input type="text" id="phone" name="phone"-->
-        <!--                       class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"-->
-        <!--                       placeholder="전화번호를 입력하세요" required>-->
-        <!--            </div>-->
-        <!--            <div>-->
-        <!--                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">이메일:</label>-->
-        <!--                <input type="email" id="email" name="email"-->
-        <!--                       class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"-->
-        <!--                       placeholder="이메일 주소를 입력하세요 " required>-->
-        <!--            </div>-->
-        <!--            <div>-->
-        <!--                <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">제목:</label>-->
-        <!--                <input type="text" id="title" name="title"-->
-        <!--                       class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"-->
-        <!--                       placeholder="제목을 입력하세요" required>-->
-        <!--            </div>-->
-        <!--            <div class="sm:col-span-2">-->
-        <!--                <label for="content" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">내용:</label>-->
-        <!--                <textarea id="content" name="content" rows="6"-->
-        <!--                          class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"-->
-        <!--                          placeholder="내용을 입력하세요..."></textarea>-->
-        <!--            </div>-->
-        <!--            <div>-->
-        <!--                <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">납품할-->
-        <!--                    주소:</label>-->
-        <!--                <input type="text" name="address" id="address"-->
-        <!--                       class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"-->
-        <!--                       placeholder="주소를 입력하세요" required>-->
-        <!--            </div>-->
-        <!--            <button type="submit"-->
-        <!--                    class="py-3 px-5 text-sm font-medium text-center text-white bg-amber-600 hover:bg-amber-700 rounded-lg  sm:w-fit  focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">-->
-        <!--                문의하기-->
-        <!--            </button>-->
-        <!--        </form>-->
-    </div>
-</section>
-<!-- End block -->
-
-<!-- Start block -->
-<section class="bg-white dark:bg-gray-900" id="section7">
-    <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-24 lg:px-6 ">
-        <h2 class="mb-6 text-3xl font-extrabold tracking-tight text-center text-gray-900 lg:mb-8 lg:text-3xl dark:text-white">
-            자주 묻는 질문</h2>
-        <div class="max-w-screen-md mx-auto">
-            <div id="accordion-flush" data-accordion="collapse"
-                 data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
-                 data-inactive-classes="text-gray-500 dark:text-gray-400">
-                <h3 id="accordion-flush-heading-1">
-                    <button type="button"
-                            class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-900 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white"
-                            data-accordion-target="#accordion-flush-body-1" aria-expanded="true"
-                            aria-controls="accordion-flush-body-1">
-                        <span>Q. 박스토피아의 차별점은 무엇인가요?</span>
-                        <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor"
-                             viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                  clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                </h3>
-                <div id="accordion-flush-body-1" class="" aria-labelledby="accordion-flush-heading-1">
-                    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">박스토피아는 소비자들이 가장 좋은 박스를 납품 받을수 있게
-                            박스 공장을 추천해드리는 통합 서비스를 하고 있습니다.
-                        </p>
-                        <p class="text-gray-500 dark:text-gray-400">뿐만 아니라 자체적인 생산라인을 보유하고 있어, 모든 직원들이 전문성을 가지고 있습니다.
-                            전국 유일하게 자동, 반자동, 수동 기계를 보유하고 있어 모든 주문제작이 가능합니다.</p>
-                    </div>
-                </div>
-                <h3 id="accordion-flush-heading-2">
-                    <button type="button"
-                            class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
-                            data-accordion-target="#accordion-flush-body-2" aria-expanded="false"
-                            aria-controls="accordion-flush-body-2">
-                        <span>Q. 박스 품질이 좋은가요?</span>
-                        <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                  clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                </h3>
-                <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
-                    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">박스토피아와 제휴한 기업들은 모두 전문성을 갖춘 것이 확인되었습니다.</p>
-
-                    </div>
-                </div>
-                <h3 id="accordion-flush-heading-3">
-                    <button type="button"
-                            class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
-                            data-accordion-target="#accordion-flush-body-3" aria-expanded="false"
-                            aria-controls="accordion-flush-body-3">
-                        <span>Q. 박스가 저렴한가요?</span>
-                        <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                  clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                </h3>
-                <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
-                    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">박스가 가장 저렴하고, 운임비가 가장 적은 곳을 추천해드립니다.</p>
-                    </div>
-                </div>
-                <h3 id="accordion-flush-heading-4">
-                    <button type="button"
-                            class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
-                            data-accordion-target="#accordion-flush-body-4" aria-expanded="false"
-                            aria-controls="accordion-flush-body-4">
-                        <span>Q. 박스 인쇄 디자인은 어디다 넘기나요?</span>
-                        <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                  clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                </h3>
-                <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
-                    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">박스 인쇄 디자인 관련된 파일 및 디자인 요구사항이 있으시다면 '<a
-                                href="mailto:goguryeo.box@gmail.com?subject=[박스토피아 이메일]"
-                                class="text-amber-600 dark:text-amber-500 hover:underline">goguryeo.box@gmail.com</a>
-                            '으로 보내주시면 됩니다.</p>
-                        <p class="text-gray-500 dark:text-gray-400">디자인을 전달하실 때에는 사용하고자 하는 파일을 첨부해 주시고, 디자인과 관련한 구체적인
-                            지침이나 요구 사항도 함께 명시해 주시면 보다
-                            원활한 진행이 가능합니다. 문의사항이 있으시다면 언제든지 이메일로 연락주시기 바랍니다.
-
-                        </p>
-
-                    </div>
-                </div>
+<!-- ===================== 프로세스 ===================== -->
+<section class="sec" id="process" style="padding-top:0">
+    <div class="wrap">
+        <div class="sec-head rv">
+            <span class="mlabel">PROCESS FLOW</span>
+            <h2>의뢰부터 납품까지, 4단계 공정</h2>
+            <p>복잡한 박스 제작 과정을 박스토피아가 단순하게 정리했습니다.</p>
+        </div>
+        <div class="flow rv">
+            <div class="f-step">
+                <h3>박스토피아 의뢰</h3>
+                <p>용도, 규격, 수량 등 원하는 요구 사항을 전화·채널톡·이메일로 전달합니다.</p>
+            </div>
+            <div class="f-step">
+                <h3>공장 추천 확인</h3>
+                <p>위치, 가격, 품질, 납기를 기반으로 최적의 공장을 비교 추천해드립니다.</p>
+            </div>
+            <div class="f-step">
+                <h3>생산</h3>
+                <p>선택된 공장에서 박스를 생산합니다. 진행 상황은 온라인으로 트래킹할 수 있습니다.</p>
+            </div>
+            <div class="f-step">
+                <h3>납품</h3>
+                <p>생산된 박스를 고객에게 안전하게 납품합니다.</p>
             </div>
         </div>
     </div>
 </section>
-<!-- End block -->
 
-<!-- Start block -->
-<section class="bg-gray-50 dark:bg-gray-800" id="section8">
-    <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
-        <div class="max-w-screen-md mx-auto text-center">
-            <h2 class="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">
-                최신 소식 </h2>
-            <p class="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-lg">
-                📧 이메일: <a href="mailto:goguryeo.box@gmail.com?subject=[박스토피아 이메일]"
-                          class="text-amber-600 dark:text-amber-500 hover:underline">goguryeo.box@gmail.com</a> 으로
-                보내주시면 빠른 시간 내에 답변 드리겠습니다.<br> 박스와 관련된 새로운 소식과 업데이트를 받아보고 싶으시다면, 저희 인스타그램에서 바로 확인하세요!</p>
-            <a href="https://www.instagram.com/boxtopia.co.kr" target="_blank"
-               class="inline-flex text-white bg-amber-600 hover:bg-amber-700 focus:ring-4 focus:ring-amber-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-amber-600 dark:hover:bg-amber-700 focus:outline-none dark:focus:ring-amber-800">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path fill-rule="evenodd"
-                          d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                          clip-rule="evenodd"/>
-                </svg> &nbsp; @Boxtopia</a></div>
+<!-- ===================== 생산 현장 ===================== -->
+<section class="sec photos" id="facility">
+    <span class="dwg-no">SHEET 05 / 현장</span>
+    <div class="wrap">
+        <div class="sec-head rv">
+            <span class="mlabel">ON-SITE RECORD</span>
+            <h2>생산 현장을 그대로 보여드립니다</h2>
+            <p>자동 · 반자동 · 수동 설비를 모두 갖춘 직영 공장의 실제 모습입니다.</p>
+        </div>
+        <div class="ph-grid">
+            <figure class="ph-card rv">
+                <div class="frame"><img src="./images/IMG_5110.JPG" alt="자동·반자동·수동 설비를 갖춘 공장 내부" loading="lazy"></div>
+                <figcaption>전 설비 생산 라인 <span>FIG. 01</span></figcaption>
+            </figure>
+            <figure class="ph-card rv rv-d1">
+                <div class="frame"><img src="./images/1공장 (1).jpg" alt="경기도 포천 1공장 외부 전경" loading="lazy"></div>
+                <figcaption>포천 직영 1공장 <span>FIG. 02</span></figcaption>
+            </figure>
+            <figure class="ph-card rv rv-d2">
+                <div class="frame"><img src="./images/2공장 (1).jpg" alt="경기도 포천 2공장 생산 현장" loading="lazy"></div>
+                <figcaption>포천 직영 2공장 <span>FIG. 03</span></figcaption>
+            </figure>
+        </div>
+        <p class="ph-note">자동 · 반자동 · 수동 기계를 모두 보유하고 있어 <b>모든 주문 제작이 가능</b>합니다.</p>
     </div>
 </section>
-<!-- End block -->
-<footer class="bg-white dark:bg-gray-800">
-    <div class="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
-        <!--        <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">-->
-        <!--            <div>-->
-        <!--                <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h3>-->
-        <!--                <ul class="text-gray-500 dark:text-gray-400">-->
-        <!--                    <li class="mb-4">-->
-        <!--                        <a href="#" class=" hover:underline">About</a>-->
-        <!--                    </li>-->
-        <!--                    <li class="mb-4">-->
-        <!--                        <a href="#" class="hover:underline">Careers</a>-->
-        <!--                    </li>-->
-        <!--                    <li class="mb-4">-->
-        <!--                        <a href="#" class="hover:underline">Brand Center</a>-->
-        <!--                    </li>-->
-        <!--                    <li class="mb-4">-->
-        <!--                        <a href="#" class="hover:underline">Blog</a>-->
-        <!--                    </li>-->
-        <!--                </ul>-->
-        <!--            </div>-->
-        <!--            <div>-->
-        <!--                <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h3>-->
-        <!--                <ul class="text-gray-500 dark:text-gray-400">-->
-        <!--                    <li class="mb-4">-->
-        <!--                        <a href="#" class="hover:underline">iOS</a>-->
-        <!--                    </li>-->
-        <!--                    <li class="mb-4">-->
-        <!--                        <a href="#" class="hover:underline">Android</a>-->
-        <!--                    </li>-->
-        <!--                    <li class="mb-4">-->
-        <!--                        <a href="#" class="hover:underline">Windows</a>-->
-        <!--                    </li>-->
-        <!--                    <li class="mb-4">-->
-        <!--                        <a href="#" class="hover:underline">MacOS</a>-->
-        <!--                    </li>-->
-        <!--                </ul>-->
-        <!--            </div>-->
-        <!--        </div>-->
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
-        <div class=" text-sm text-gray-500">
-            <div class="max-w-screen-md container mx-auto">
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <p>박스토피아 | 대표자 : 이종률</p>
-                        <p>주소 : 경기도 포천시 신북면 신창길 27</p>
-                        <!--                        <p>개인정보보호책임자 :</p>-->
-
-
-                        <p>고객센터 : 031)536-0844 | 팩스 : 031)536-0845</p>
-                        <p class="">이메일 주소 : <a href="mailto:goguryeo.box@gmail.com"
-                                                class=" hover:underline">goguryeo.box@gmail.com</a>
-                        </p>
-                    </div>
-                    <div class="flex justify-end">
-                        <a href="https://www.instagram.com/boxtopia.co.kr" target="_blank"
-                           class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
-                            <svg class=" w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill-rule="evenodd"
-                                      d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                                      clip-rule="evenodd"/>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <!--                <a href="#"-->
-                    <!--                   class="flex items-center justify-center mt-5">-->
-                    <!--                    <img src="./images/boxtopia_logo.png" class="h-6 mr-3 sm:h-9" alt="Boxtopia Logo"-->
-                    <!--                         style="background-color: #EABA81"-->
-                    <!--                    />-->
-                    <!--                </a>-->
-                    <!--            <span class="block text-sm text-center text-gray-500 dark:text-gray-400">© 고구려박스</span>-->
-
-
-                    <p class=" ">Copyright(C)  <script>
-                        document.write(new Date().getFullYear());
-                    </script> 고구려박스 All rights reserved.</p>
-                </div>
-            </div>
-
-            <!--            <ul class="flex justify-center mt-5 space-x-5">-->
-            <!--                <li>-->
-            <!--                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">-->
-            <!--                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">-->
-            <!--                            <path fill-rule="evenodd"-->
-            <!--                                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"-->
-            <!--                                  clip-rule="evenodd"/>-->
-            <!--                        </svg>-->
-            <!--                    </a>-->
-            <!--                </li>-->
-            <!--                <li>-->
-            <!--                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">-->
-            <!--                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">-->
-            <!--                            <path fill-rule="evenodd"-->
-            <!--                                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"-->
-            <!--                                  clip-rule="evenodd"/>-->
-            <!--                        </svg>-->
-            <!--                    </a>-->
-            <!--                </li>-->
-            <!--                <li>-->
-            <!--                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">-->
-            <!--                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">-->
-            <!--                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>-->
-            <!--                        </svg>-->
-            <!--                    </a>-->
-            <!--                </li>-->
-            <!--                <li>-->
-            <!--                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">-->
-            <!--                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">-->
-            <!--                            <path fill-rule="evenodd"-->
-            <!--                                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"-->
-            <!--                                  clip-rule="evenodd"/>-->
-            <!--                        </svg>-->
-            <!--                    </a>-->
-            <!--                </li>-->
-            <!--                <li>-->
-            <!--                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">-->
-            <!--                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">-->
-            <!--                            <path fill-rule="evenodd"-->
-            <!--                                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"-->
-            <!--                                  clip-rule="evenodd"/>-->
-            <!--                        </svg>-->
-            <!--                    </a>-->
-            <!--                </li>-->
-            <!--            </ul>-->
+<!-- ===================== 인증/수상 ===================== -->
+<section class="sec" id="awards">
+    <span class="dwg-no">SHEET 06 / 인증</span>
+    <div class="wrap">
+        <div class="sec-head rv">
+            <span class="mlabel">CERTIFICATION</span>
+            <h2>인증과 수상으로 증명합니다</h2>
+            <p>이미지를 클릭하면 크게 볼 수 있습니다.</p>
+        </div>
+        <div class="award-strip rv">
+            <figure class="award" data-full="images/prize2/(수정본)덕성여대 창업경진대회_2023_04.jpg">
+                <img src="images/prize2/(수정본)덕성여대 창업경진대회_2023_04.jpg" alt="덕성여대 창업경진대회 수상 (2023.04)" loading="lazy">
+                <figcaption>덕성여대 창업경진대회 · 2023</figcaption>
+            </figure>
+            <figure class="award" data-full="images/prize2/청년 창업 아이디어 경진대회_2020_11.jpg">
+                <img src="images/prize2/청년 창업 아이디어 경진대회_2020_11.jpg" alt="청년 창업 아이디어 경진대회 수상 (2020.11)" loading="lazy">
+                <figcaption>청년 창업 아이디어 경진대회 · 2020</figcaption>
+            </figure>
+            <figure class="award" data-full="images/prize2/서울 시립대학교 창업경진대회_2020_02.png">
+                <img src="images/prize2/서울 시립대학교 창업경진대회_2020_02.png" alt="서울시립대학교 창업경진대회 수상 (2020.02)" loading="lazy">
+                <figcaption>서울시립대 창업경진대회 · 2020</figcaption>
+            </figure>
+            <figure class="award" data-full="images/prize2/대구광역시 수상_2019_12.jpg">
+                <img src="images/prize2/대구광역시 수상_2019_12.jpg" alt="대구광역시 수상 (2019.12)" loading="lazy">
+                <figcaption>대구광역시 수상 · 2019</figcaption>
+            </figure>
+            <figure class="award" data-full="images/prize2/문화예술교육 수료증_2019_07.jpg">
+                <img src="images/prize2/문화예술교육 수료증_2019_07.jpg" alt="문화예술교육 수료증 (2019.07)" loading="lazy">
+                <figcaption>문화예술교육 수료 · 2019</figcaption>
+            </figure>
+            <figure class="award" data-full="images/prize/스타트업캠퍼스수료증2019_02.png">
+                <img src="images/prize/스타트업캠퍼스수료증2019_02.png" alt="스타트업캠퍼스 수료증 (2019.02)" loading="lazy">
+                <figcaption>스타트업캠퍼스 수료 · 2019</figcaption>
+            </figure>
         </div>
     </div>
+</section>
 
+<div class="lightbox" id="lightbox" role="dialog" aria-label="인증서 크게 보기">
+    <button class="close" id="lbClose">CLOSE ✕</button>
+    <img src="" alt="인증서 확대 이미지" id="lbImg">
+</div>
 
+<!-- ===================== FAQ ===================== -->
+<section class="sec" id="faq" style="padding-top:0">
+    <div class="wrap">
+        <div class="sec-head rv">
+            <span class="mlabel">Q &amp; A</span>
+            <h2>자주 묻는 질문</h2>
+        </div>
+        <div class="faq-list rv">
+            <details open>
+                <summary><span class="qno">Q.01</span><span class="t">박스토피아의 차별점은 무엇인가요?</span></summary>
+                <div class="a">
+                    소비자가 가장 좋은 박스를 납품받을 수 있도록 박스 공장을 추천해드리는 통합 서비스를 운영합니다.
+                    또한 자체 생산라인을 보유하고 있어 모든 직원이 제조 전문성을 갖추고 있으며,
+                    자동·반자동·수동 기계를 모두 보유해 모든 주문 제작이 가능합니다.
+                </div>
+            </details>
+            <details>
+                <summary><span class="qno">Q.02</span><span class="t">박스 품질이 좋은가요?</span></summary>
+                <div class="a">
+                    박스토피아와 제휴한 기업들은 모두 전문성이 검증된 곳입니다.
+                    직영 공장에서 쌓은 제조 노하우로 협력 공장의 품질까지 함께 관리합니다.
+                </div>
+            </details>
+            <details>
+                <summary><span class="qno">Q.03</span><span class="t">박스가 저렴한가요?</span></summary>
+                <div class="a">
+                    박스 단가가 가장 저렴하고 운임비가 가장 적게 드는 공장을 비교해 추천해드립니다.
+                    납품지 인근 공장 매칭으로 물류비까지 함께 절감합니다.
+                </div>
+            </details>
+            <details>
+                <summary><span class="qno">Q.04</span><span class="t">박스 인쇄 디자인은 어디로 보내나요?</span></summary>
+                <div class="a">
+                    인쇄 디자인 파일과 요구사항은
+                    <a href="mailto:goguryeo.box@gmail.com?subject=[박스토피아 디자인 전달]">goguryeo.box@gmail.com</a>
+                    으로 보내주시면 됩니다. 사용할 파일을 첨부하시고, 디자인 관련 구체적인 지침이나 요구 사항을
+                    함께 명시해 주시면 더 원활하게 진행됩니다.
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== 견적 문의 ===================== -->
+<section class="sec contact" id="contact">
+    <div class="wrap contact-grid">
+        <div>
+            <span class="mlabel rv">REQUEST FOR QUOTATION</span>
+            <h2 class="rv">지금 문의하시면<br>빠르게 견적을 안내해드립니다</h2>
+            <p class="lede rv rv-d1">
+                제품 문의와 제휴 문의 모두 환영합니다.
+                편하신 채널로 연락 주세요 — 박스 전문가가 직접 응대합니다.
+            </p>
+            <div class="c-channels rv rv-d2">
+                <a class="c-line" href="tel:0315360844">
+                    <span class="ico">TEL</span>
+                    <span><b>031-536-0844</b><small>고객센터 · 평일 업무시간</small></span>
+                </a>
+                <a class="c-line" href="javascript:void(0)" onclick="ChannelIO('showMessenger')">
+                    <span class="ico">CHAT</span>
+                    <span><b>채널톡 실시간 상담</b><small>화면 우측 하단 버튼으로도 가능합니다</small></span>
+                </a>
+                <a class="c-line" href="mailto:goguryeo.box@gmail.com?subject=[박스토피아 문의]">
+                    <span class="ico">MAIL</span>
+                    <span><b>goguryeo.box@gmail.com</b><small>디자인 파일 전달 · 제휴 문의</small></span>
+                </a>
+            </div>
+        </div>
+        <form class="q-form rv rv-d1" id="quoteForm">
+            <h3>간편 견적 의뢰서</h3>
+            <p class="note">작성하신 내용으로 이메일 문의가 작성됩니다. 상세 사양은 상담 시 함께 정리해드립니다.</p>
+            <div class="field-row">
+                <div class="field">
+                    <label for="fName">NAME / COMPANY — 이름·회사명</label>
+                    <input type="text" id="fName" name="name" placeholder="예) 홍길동 / OO식품" required>
+                </div>
+                <div class="field">
+                    <label for="fPhone">CONTACT — 연락처</label>
+                    <input type="tel" id="fPhone" name="phone" placeholder="010-0000-0000" required>
+                </div>
+            </div>
+            <div class="field-row">
+                <div class="field">
+                    <label for="fUse">USAGE — 박스 용도</label>
+                    <select id="fUse" name="use">
+                        <option>식품 · 음료</option>
+                        <option>화장품</option>
+                        <option>전자제품</option>
+                        <option>패션 · 의류</option>
+                        <option>물류 · 택배</option>
+                        <option>기타</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="fQty">QTY — 예상 수량</label>
+                    <input type="text" id="fQty" name="qty" placeholder="예) 월 1,000장">
+                </div>
+            </div>
+            <div class="field">
+                <label for="fMemo">NOTE — 요청 사항 (선택)</label>
+                <textarea id="fMemo" name="memo" rows="3" placeholder="규격, 인쇄 여부, 납품 지역 등 알고 계신 내용만 적어주세요."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">견적 요청하기 →</button>
+        </form>
+    </div>
+</section>
+
+<!-- ===================== 푸터 (도면 표제란) ===================== -->
+<footer>
+    <div class="wrap" style="padding-top:0">
+        <div class="title-block">
+            <div class="tb-cell">
+                <h4>PROJECT</h4>
+                <img src="./images/boxtopia_logo.png" alt="박스토피아 로고" class="logo-img">
+                <p><b>박스토피아</b> — 박스의 모든 것,<br>당신의 포장 솔루션을 위한 맞춤 전문가</p>
+            </div>
+            <div class="tb-cell">
+                <h4>CONTACT</h4>
+                <ul>
+                    <li>고객센터 : <a href="tel:0315360844"><b>031-536-0844</b></a></li>
+                    <li>팩스 : 031-536-0845</li>
+                    <li>이메일 : <a href="mailto:goguryeo.box@gmail.com">goguryeo.box@gmail.com</a></li>
+                    <li><a href="https://www.instagram.com/boxtopia.co.kr" target="_blank" rel="noopener">인스타그램 @boxtopia.co.kr ↗</a></li>
+                </ul>
+            </div>
+            <div class="tb-cell">
+                <h4>COMPANY</h4>
+                <ul>
+                    <li>박스토피아 | 대표자 : <b>이종률</b></li>
+                    <li>본사 : 경기도 포천시 신북면 신창길 27</li>
+                    <li>직영 공장 : 포천 4개소 · 남양주 1개소</li>
+                </ul>
+            </div>
+        </div>
+        <div class="f-bottom">
+            <span>COPYRIGHT © <script>document.write(new Date().getFullYear());</script> 고구려박스 ALL RIGHTS RESERVED.</span>
+            <span>SHEET 1 OF 1 — APPROVED</span>
+        </div>
+    </div>
 </footer>
-<script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+
+<!-- 모바일 고정 CTA -->
+<nav class="mobile-bar" aria-label="빠른 문의">
+    <a href="tel:0315360844">☎ 전화</a>
+    <a href="javascript:void(0)" onclick="ChannelIO('showMessenger')">💬 채널톡</a>
+    <a href="#contact" class="hot">견적 받기</a>
+</nav>
+
+<script>
+    // 모바일 메뉴
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    // 스크롤 리빌 (?noanim 또는 미지원 환경에서는 즉시 표시)
+    const noAnim = location.search.includes('noanim') || !('IntersectionObserver' in window);
+    if (noAnim) {
+        document.querySelectorAll('.rv').forEach(el => el.classList.add('on'));
+    } else {
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
+        document.querySelectorAll('.rv:not(.on)').forEach(el => io.observe(el));
+    }
+
+    // 숫자 카운트업
+    if (noAnim) {
+        document.querySelectorAll('.count').forEach(el => el.textContent = el.dataset.to);
+    } else {
+        const cio = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (!e.isIntersecting) return;
+                const el = e.target, to = +el.dataset.to, dur = 1400, t0 = performance.now();
+                (function tick(t) {
+                    const p = Math.min((t - t0) / dur, 1);
+                    el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3)));
+                    if (p < 1) requestAnimationFrame(tick);
+                })(t0);
+                cio.unobserve(el);
+            });
+        }, { threshold: 0.6 });
+        document.querySelectorAll('.count').forEach(el => cio.observe(el));
+    }
+
+    // 인증서 라이트박스
+    const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lbImg');
+    document.querySelectorAll('.award').forEach(fig => {
+        fig.addEventListener('click', () => {
+            lbImg.src = fig.dataset.full;
+            lbImg.alt = fig.querySelector('img').alt;
+            lb.classList.add('open');
+        });
+    });
+    document.getElementById('lbClose').addEventListener('click', () => lb.classList.remove('open'));
+    lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('open'); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
+
+    // 견적 폼 → 이메일 작성 (백엔드 없이 동작)
+    document.getElementById('quoteForm').addEventListener('submit', e => {
+        e.preventDefault();
+        const f = e.target;
+        const body = [
+            '이름/회사명 : ' + f.name.value,
+            '연락처 : ' + f.phone.value,
+            '박스 용도 : ' + f.use.value,
+            '예상 수량 : ' + (f.qty.value || '미정'),
+            '요청 사항 : ' + (f.memo.value || '없음')
+        ].join('\n');
+        location.href = 'mailto:goguryeo.box@gmail.com'
+            + '?subject=' + encodeURIComponent('[박스토피아 견적 요청] ' + f.name.value)
+            + '&body=' + encodeURIComponent(body);
+    });
+</script>
 </body>
 </html>

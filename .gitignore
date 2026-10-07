@@ -3,7 +3,6 @@
 node_modules/
 .omc/
 __test*.html
-
-# 임시 시안 배포 단계에서는 제외 — boxtopia.co.kr 도메인이 기존 운영 저장소에 연결되어 있어
-# 이 저장소에 포함 시 GitHub Pages 커스텀 도메인 충돌 발생. 정식 이전 시 .gitignore에서 제거할 것.
-CNAME
+test-results/
+playwright-report/
+.serena/

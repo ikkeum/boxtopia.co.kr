@@ -1,14 +1,17 @@
 ## Boxtopia
-## Getting started
 
-Make sure that you have [Node.js](https://nodejs.org/en/), [Tailwind CSS](https://tailwindcss.com/docs/installation) and [Flowbite](https://flowbite.com/docs/getting-started/quickstart/) installed.
+박스토피아(https://boxtopia.co.kr) 랜딩페이지. 빌드 과정 없이 `index.html` 하나로 동작하는 정적 사이트이며 GitHub Pages(`main` 브랜치 루트)로 배포된다.
 
-1. Run `npm install` inside your terminal
+- 커스텀 도메인: `CNAME` (`boxtopia.co.kr`)
+- 검색엔진: `robots.txt`, `sitemap.xml`, 네이버 사이트 인증(`naver*.html`, `index.html` 메타)
+- 로컬 확인: `python3 -m http.server` 후 http://localhost:8000 (`?noanim`을 붙이면 스크롤 애니메이션 비활성화)
 
-2. Watch for files and compile Tailwind CSS + Flowbite:
+### 테스트
 
 ```
-npx tailwindcss -i ./input.css -o ./output.css --watch
+npm install
+npx playwright install chromium
+npm test
 ```
 
-3. To deploy you will only need the `index.html` file and the `output.css` styles.
+배포 설정(CNAME·sitemap·robots), SEO 메타, 이미지 로드, 모바일 가로 스크롤 여부를 데스크톱·모바일에서 검증한다.

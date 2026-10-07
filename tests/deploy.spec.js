@@ -47,19 +47,17 @@ test.describe('메인 페이지', () => {
         await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', `${SITE}/`);
         await expect(page.locator('meta[property="og:url"]')).toHaveAttribute('content', `${SITE}/`);
         await expect(page.locator('meta[property="og:type"]')).toHaveAttribute('content', 'website');
-        await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', `${SITE}/images/main.jpg`);
+        await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', `${SITE}/images/og-image.jpg`);
     });
 
     test('모든 이미지가 정상 로드된다', async ({ page }) => {
-        // lazy 이미지를 강제로 로드한 뒤 결과를 확인 (라이트박스처럼 src가 비어 있는 img는 제외)
-        const broken = await page.evaluate(async () => {
-            const imgs = [...document.querySelectorAll('img[src]:not([src=""])')];
-            await Promise.all(imgs.map(img => {
-                img.loading = 'eager';
-                return img.complete ? null : new Promise(r => { img.onload = img.onerror = r; });
-            }));
-            return imgs.filter(i => i.naturalWidth === 0).map(i => i.getAttribute('src'));
-        });
+        // lazy 이미지를 eager로 바꿔 로드를 강제하고, 로딩이 끝난 뒤 판정한다
+        // (라이트박스처럼 src가 비어 있는 img는 제외)
+        const selector = 'img[src]:not([src=""])';
+        await page.$$eval(selector, imgs => imgs.forEach(img => { img.loading = 'eager'; }));
+        await page.waitForFunction(sel => [...document.querySelectorAll(sel)].every(i => i.complete), selector);
+        const broken = await page.$$eval(selector, imgs =>
+            imgs.filter(i => i.naturalWidth === 0).map(i => i.getAttribute('src')));
         expect(broken).toEqual([]);
     });
 
